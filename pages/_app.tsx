@@ -5,7 +5,10 @@ import {createWrapper} from "next-redux-wrapper";
 import "../styles/main.scss";
 
 function MyApp({Component, pageProps}: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <Component {...pageProps} />
+    )
+
 }
 
 const makeStore = () => store;

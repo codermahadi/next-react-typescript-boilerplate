@@ -1,5 +1,10 @@
 import React, {FC, ReactElement} from 'react';
 import Head from "next/head";
+import {makeStyles} from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Header from "./includes/Header";
+import Copyright from "./includes/Copyright";
+import Box from "@material-ui/core/Box";
 
 type LayoutProps = {
     children: ReactElement,
@@ -10,9 +15,24 @@ type LayoutProps = {
     url: string
 }
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+    },
+    appBarSpacer: theme.mixins.toolbar,
+    content: {
+        backgroundColor: 'rgb(247, 249, 252) none repeat scroll 0% 0%',
+        flexGrow: 1,
+        height: '100vh',
+        overflow: 'auto',
+    }
+}));
+
 const Layout: FC<any> = ({children, title, tags, description, imageUrl, url}: LayoutProps) => {
+    const classes = useStyles();
+
     return (
-        <div>
+        <div className={classes.root}>
             <Head>
                 <title>{title || 'boilerplate'}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -38,13 +58,16 @@ const Layout: FC<any> = ({children, title, tags, description, imageUrl, url}: La
 
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <header>
-                <h1>Your Header section</h1>
-            </header>
-            <main>{children}</main>
-            <footer><h2>
-                Footer Section
-            </h2></footer>
+
+            <CssBaseline/>
+            <Header/>
+            <main className={classes.content}>
+                <div className={classes.appBarSpacer}/>
+                    {children}
+                <Box pt={4}>
+                    <Copyright/>
+                </Box>
+            </main>
         </div>
     )
 };
