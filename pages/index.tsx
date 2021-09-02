@@ -11,6 +11,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import PageHeader from "../components/includes/pageHeader";
 import Container from "@material-ui/core/Container";
+import ReportCard from "../components/includes/ReportCard";
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -38,6 +39,28 @@ const Home: NextPage = () => {
                             subTitle={"page description"}/>
 
                 <Grid container spacing={3}>
+
+                    {/* Recent Deposits */}
+                    <Grid item xs={6} md={3} lg={3}>
+                        <Paper elevation={0}>
+                            <ReportCard/>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6} md={3} lg={3}>
+                        <Paper elevation={0}>
+                            <ReportCard/>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6} md={3} lg={3}>
+                        <Paper elevation={0}>
+                            <ReportCard/>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6} md={3} lg={3}>
+                        <Paper elevation={0}>
+                            <ReportCard/>
+                        </Paper>
+                    </Grid>
 
                     {/* Chart */}
                     <Grid item xs={12} md={6} lg={6}>

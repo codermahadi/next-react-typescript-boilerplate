@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {Paper, Card, Typography, makeStyles} from '@material-ui/core';
+import LoopIcon from '@material-ui/icons/Loop';
 
 const useStyles = makeStyles(theme => ({
     root: {
