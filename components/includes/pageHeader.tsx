@@ -33,7 +33,6 @@ const PageHeader: FC<any> = ({title, subTitle, icon}: PageHeaderProps) => {
 
     const classes = useStyles();
     return (
-        <Paper elevation={0}>
             <div className={classes.pageHeader}>
                 <Card className={classes.pageIcon} elevation={0}>
                     {icon}
@@ -43,7 +42,6 @@ const PageHeader: FC<any> = ({title, subTitle, icon}: PageHeaderProps) => {
                     <Typography variant="subtitle2" component="div">{subTitle}</Typography>
                 </div>
             </div>
-        </Paper>
     )
 };
 export default PageHeader;

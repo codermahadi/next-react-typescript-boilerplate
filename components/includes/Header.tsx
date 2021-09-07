@@ -7,7 +7,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import {makeStyles} from "@material-ui/core/styles";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import {mainListItems, secondaryListItems} from "./LeftMenu";
+import LeftNav from "./LeftNav";
 
 const drawerWidth = 240;
 
@@ -132,9 +132,9 @@ const Header: FC = () => {
                     </IconButton>
                 </div>
                 <Divider/>
-                <List>{mainListItems}</List>
-                <Divider/>
-                <List>{secondaryListItems}</List>
+                <List>
+                    <LeftNav />
+                </List>
             </Drawer>
         </>
     )

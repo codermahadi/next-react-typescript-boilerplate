@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./includes/Header";
 import Copyright from "./includes/Copyright";
 import Box from "@material-ui/core/Box";
+import Container from "@material-ui/core/Container";
 
 type LayoutProps = {
     children: ReactElement,
@@ -18,6 +19,10 @@ type LayoutProps = {
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+    },
+    container: {
+        paddingTop: theme.spacing(1),
+        paddingBottom: theme.spacing(1),
     },
     appBarSpacer: theme.mixins.toolbar,
     content: {
@@ -62,11 +67,13 @@ const Layout: FC<any> = ({children, title, tags, description, imageUrl, url}: La
             <CssBaseline/>
             <Header/>
             <main className={classes.content}>
-                <div className={classes.appBarSpacer}/>
+                <Container maxWidth="xl" className={classes.container}>
+                    <div className={classes.appBarSpacer}/>
                     {children}
-                <Box pt={4}>
-                    <Copyright/>
-                </Box>
+                    <Box pt={4}>
+                        <Copyright/>
+                    </Box>
+                </Container>
             </main>
         </div>
     )

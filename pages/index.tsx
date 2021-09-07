@@ -10,14 +10,9 @@ import clsx from "clsx";
 import {makeStyles} from "@material-ui/core/styles";
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import PageHeader from "../components/includes/pageHeader";
-import Container from "@material-ui/core/Container";
 import ReportCard from "../components/includes/ReportCard";
 
 const useStyles = makeStyles((theme) => ({
-    container: {
-        paddingTop: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    },
     paper: {
         padding: theme.spacing(2),
         display: 'flex',
@@ -34,12 +29,10 @@ const Home: NextPage = () => {
 
     return (
         <Layout>
-            <Container maxWidth="xl" className={classes.container}>
-                <PageHeader icon={<AssessmentIcon fontSize="large"/>} title="Page Title"
-                            subTitle={"page description"}/>
+                <PageHeader icon={<AssessmentIcon fontSize="large"/>} title="Dashboard Report"
+                            subTitle={"Home page report share"}/>
 
                 <Grid container spacing={3}>
-
                     {/* Recent Deposits */}
                     <Grid item xs={6} md={3} lg={3}>
                         <Paper elevation={0}>
@@ -95,7 +88,6 @@ const Home: NextPage = () => {
                         </Paper>
                     </Grid>
                 </Grid>
-            </Container>
         </Layout>
     );
 };
