@@ -19,6 +19,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "formik": "^2.2.9",
+    "moment": "^2.29.1",
+    "mui-datatables": "^3.7.8",
     "next": "11.1.2",
     "next-redux-wrapper": "^7.0.2",
     "node-sass": "^5.0.0",

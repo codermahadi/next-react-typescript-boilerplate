@@ -18,6 +18,12 @@ const LeftNav = () => {
 
     return (
         <>
+            <ul>
+                <li><Link href={"/"}>Dashboard</Link></li>
+                <li><Link href={"/form"}>Form</Link></li>
+                <li><Link href={"/table"}>Table</Link></li>
+                <li><Link href={"/login"}>Login</Link></li>
+            </ul>
             <Link href="#">
                 <ListItem button>
                     <ListItemIcon>
